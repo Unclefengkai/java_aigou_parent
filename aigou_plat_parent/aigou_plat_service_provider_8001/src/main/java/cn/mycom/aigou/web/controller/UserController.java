@@ -15,7 +15,7 @@ public class UserController {
     public AjaxResult login(@RequestBody User user){
         //调用servicet 和mapper
         if(user!=null&& !StringUtils.isEmpty(user.getName())&&!StringUtils.isEmpty(user.getPassword())){
-            if ("fengkai".equals(user.getName())&&"123456".equals(user.getPassword())){
+            if ("admin".equals(user.getName())&&"123456".equals(user.getPassword())){
                 return AjaxResult.me().setMsg("登录成功");
             }else {
                 return AjaxResult.me().setSuccess(false).setMsg("登录失败");
